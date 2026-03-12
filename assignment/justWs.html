@@ -1,3 +1,11 @@
 <script>
     let ws = new WebSocket('ws://localhost:8080'); // this creates a new WebSocket connection to the server at ws://localhost:8080
+    ws.onopen = function() {
+        console.log('WebSocket connection opened');
+        ws.send('Hello, server!'); // send a message to the server when the connection is opened
+    };
+    ws.onmessage = function(event) {
+        console.log('Message from server: ' + event.data); // log any messages received from the server
+        ws.send('Thanks for the message!'); // send a response back to the server
+    };
 </script>
