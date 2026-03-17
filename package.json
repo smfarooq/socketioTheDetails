@@ -19,6 +19,8 @@
   },
   "homepage": "https://github.com/robertbunch/socketioTheDetails#readme",
   "dependencies": {
+    "express": "^5.2.1",
+    "socket.io": "^4.8.3",
     "ws": "^8.19.0"
   }
 }
